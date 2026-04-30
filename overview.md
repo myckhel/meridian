@@ -77,7 +77,7 @@ interface MCPTool {
 
 #### 2. Tool-Calling Agent
 
-* Use an LLM with function/tool calling (e.g. OpenAI / compatible)
+* Use an LLM with function/tool calling (e.g. OpenAI)
 * Convert user intent → MCP tool call
 
 Key flows:
@@ -93,7 +93,7 @@ Key flows:
 
 Use:
 
-* Streamlit or Gradio
+* Gradio
 
 Features:
 
@@ -108,7 +108,7 @@ Features:
 Core logic:
 
 ```ts
-User → LLM → Tool निर्णय → MCP Call → Response → LLM → User
+User → LLM → Tool → MCP Call → Response → LLM → User
 ```
 
 Add:
