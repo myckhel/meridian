@@ -2,9 +2,8 @@
 title: Meridian Support Demo
 colorFrom: blue
 colorTo: green
-sdk: gradio
-sdk_version: 5.50.0
-app_file: hf_app.py
+sdk: docker
+app_port: 7860
 pinned: false
 ---
 
