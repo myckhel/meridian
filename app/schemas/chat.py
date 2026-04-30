@@ -1,4 +1,12 @@
+from typing import Literal
+
 from pydantic import BaseModel, Field
+
+
+class ToolExecutionEvent(BaseModel):
+    tool_name: str
+    status: Literal["completed", "failed"]
+    summary: str
 
 
 class ChatRequest(BaseModel):
@@ -9,3 +17,4 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     message: str
     session_id: str | None = None
+    tool_events: list[ToolExecutionEvent] = Field(default_factory=list)

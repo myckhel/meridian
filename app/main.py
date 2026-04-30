@@ -1,6 +1,16 @@
+from pathlib import Path
+import sys
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+import uvicorn
+
+
+if __package__ in (None, ""):
+    project_root = Path(__file__).resolve().parents[1]
+    if str(project_root) not in sys.path:
+        sys.path.insert(0, str(project_root))
 
 from app.api.router import api_router
 from app.core.config import get_settings
@@ -36,3 +46,7 @@ def create_application() -> FastAPI:
 
 
 app = create_application()
+
+
+if __name__ == "__main__":
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000)
