@@ -9,6 +9,32 @@ pinned: false
 
 # Meridian FastAPI Scaffold
 
+## Demo screenshots
+
+### Assistant capabilities overview
+
+Shows the assistant summarizing the actions it can perform on a user's behalf.
+
+![Assistant capabilities overview](shots/1.png)
+
+### Purchase flow with verification
+
+Shows the assistant prompting for email and PIN before proceeding with an order.
+
+![Purchase flow with verification](shots/2.png)
+
+### Order follow-up and inventory lookup
+
+Shows the assistant placing an order, then returning the list of laptops currently in stock.
+
+![Order follow-up and inventory lookup](shots/3.png)
+
+### Identity verification and order recovery
+
+Shows the assistant handling identity verification and recovering from a customer record lookup issue.
+
+![Identity verification and order recovery](shots/4.png)
+
 ## Run locally
 
 ```bash
