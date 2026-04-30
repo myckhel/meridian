@@ -1,0 +1,17 @@
+.git
+.gitignore
+.pytest_cache
+.ruff_cache
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+tests
+overview.md
+plan-intro.md
+plan.md
+project-specs.md
+technical-spec.md
+test-data.md

@@ -1,4 +1,4 @@
-.PHONY: install dev run lock
+.PHONY: install dev run lock docker-build docker-run
 
 install:
 	uv sync
@@ -11,3 +11,9 @@ run:
 
 lock:
 	uv lock
+
+docker-build:
+	docker build -t meridian-api .
+
+docker-run:
+	docker run --rm -p 8000:8000 --env-file .env meridian-api
